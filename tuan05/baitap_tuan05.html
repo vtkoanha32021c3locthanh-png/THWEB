@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n = parseInt(prompt("Nhap so luong SV"));
+        //var a = prompt("Nhap mssv: ")
+        //var b = prompt("Nhap ho ten: ")
+        //var c = prompt("Nhap lop: ")
+
+        document.write("<table border='1'>");
+        document.write("<tr><td colspan='3' style='color:red; font-weight:bold'>" + "DANH SÁCH SINH VIÊN</td></tr>");
+        document.write("<tr><th>MSSV</th><th>Ho Ten</th><th>Lop</th></tr>");
+        for (var i = 1; i <= n; i++) {
+            var a = prompt("Nhap ma so SV thu " + i);
+            var b = prompt("Nhap Ho ten SV thu " + i);
+            var c = prompt("Nhap Lop SV thu " + i);
+
+            document.write("<tr><td>" + a + "</td><td>" + b + "</td><td>" + c + "</td></tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <input type="text" name="" id="txt">
+    <button id="btn">Kiem Tra Ket Qua</button>
+    <p id="result"></p>
+
+    <script>
+        $("#btn").on("click", function() {
+            var chuoi = $("#txt").val();
+            var pattern = /^\d+$/;
+
+            if (pattern.test(chuoi)) {
+                $("#result").text("ĐÚNG");
+            } else {
+                $("#result").text("SAI");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

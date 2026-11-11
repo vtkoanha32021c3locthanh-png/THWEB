@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <div id="lesson_1">
+            <h2 class="title"><i>Lesson 1:</i> Đổi màu chữ khi click nút</h2>
+            <button class="btn btn_ls1" onclick="changeColor()">Click Me</button>
+            <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt modi asperiores autem quaerat voluptatum natus illo ratione nisi officiis ipsa consectetur fugit, cumque sint non. Hic voluptatum voluptatem omnis modi!</p>
+        </div>
+
+        <div id="lesson_2">
+            <h2 class="title"><i>Lesson 2:</i> Tạo 1 nút "Ẩn/Hiện" và 1 hình ảnh (hoặc div). Click nút thì toggle hiển thị/ẩn phần tử đó.</h2>
+            <button class="btn btn_ls2" onclick="displayToggle()">Click Me</button>
+            <p class="content" style="display: block;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt modi asperiores autem quaerat voluptatum natus illo ratione nisi officiis ipsa consectetur fugit, cumque sint non. Hic voluptatum voluptatem omnis modi!</p>
+        </div>
+
+        <div id="lesson_3">
+            <h2 class="title"><i>Lesson 3:</i> Đếm số lần click</h2>
+            <button class="btn btn_ls2" onclick="clickCount()">Click Me</button>
+            <p class="content" data-count="0">0</p>
+        </div>
+
+        <div id="lesson_4">
+            <h2>Lesson 4: Thay đổi nội dung</h2>
+            <input type="text" placeholder="Nhập nội dung">
+            <button onclick="updateText()">Cập nhật</button>
+            <p class="result"></p>
+        </div>
+
+        <div id="lesson_5">
+            <h2>Lesson 5: Đổi màu nền</h2>
+            <button onclick="changeBackground('lightcoral')">Đỏ</button>
+            <button onclick="changeBackground('lightblue')">Xanh</button>
+            <button onclick="changeBackground('lightyellow')">Vàng</button>
+        </div>
+
+        <div id="lesson_6">
+            <h2>Lesson 6-7: To-do list</h2>
+            <input type="text" placeholder="Việc cần làm">
+            <button onclick="addTodo()">Thêm</button>
+            <ul></ul>
+        </div>
+
+        <div id="lesson_8">
+            <h2>Lesson 8: Đếm ký tự</h2>
+            <input type="text" oninput="updateLength(this)" placeholder="Nhập text">
+            <p class="result">0 ký tự</p>
+        </div>
+
+        <div id="lesson_9">
+            <h2>Lesson 9: Đổi kiểu chữ khi rê chuột</h2>
+            <p onmouseover="makeBold(this)" onmouseout="resetBold(this)">Rê chuột vào đoạn này</p>
+        </div>
+
+        <div id="lesson_10">
+            <h2>Lesson 10: Kiểm tra form</h2>
+            <form onsubmit="validateForm(event)">
+                <input type="text" placeholder="Nhập dữ liệu">
+                <button type="submit">Gửi</button>
+            </form>
+            <p class="message"></p>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

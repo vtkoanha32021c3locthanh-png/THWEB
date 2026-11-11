@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // [abc]
+        //1
+        var str1 = "12345";
+        var pt1 = /[135]/g;
+        var kq1 = str1.match(pt1);
+        console.log(kq1)
+
+        //2
+        var str2 = "Hello hello HELLO";
+        var pt2 = /[hH]/g;
+        var kq2 = str2.match(pt2);
+        console.log(kq2)
+
+        //3
+        var str3 = "Xin chào, bạn khỏe không? Tốt!";
+        var pt3 = /[.,!?]/g;
+        var kq3 = str3.match(pt3);
+        console.log(kq3)
+
+        // [^abc]
+        //1
+        var str4 = "programming";
+        var pt4 = /[^ ueoai]/g;
+        var kq4 = str4.replace(pt4, " ");
+        console.log(kq4)
+
+        //2
+        var str5 = 'nói "xin chào" và "tạm biệt"';
+        var pt5 = /"[^"]+"/g;
+        var kq5 = str5.match(pt5);
+        console.log(kq5)
+
+        //3
+        var str6 = "a1,b2;c3";
+        var pt6 = /[^ a-z \d]/g;
+        var kq6 = str6.split(pt6);
+        console.log(kq6)
+
+        //[a-g]
+        //1
+        var str7 = "Học ReactJS Và TypeScript";
+        var pt7 = /[A-Z]/g;
+        var kq7 = str7.match(pt7);
+        console.log(kq7)
+
+        //2
+        var str8 = "#1a2B3c";
+        var pt8 = /[A-Z]/g;
+        var kq8 = str8.match(pt8);
+        console.log(kq8)
+    </script>
+
+
+</body>
+
+</html>

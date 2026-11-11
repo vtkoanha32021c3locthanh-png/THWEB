@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore Online</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <html>
+    <button id="btn-move">Di chuyển</button>
+    <button id="btn-grow">Phóng to rồi thu lại</button>
+    <button id="btn-stop">Dừng</button>
+    <div id="box" style="position:relative"></div>
+    <div id="box" style="
+    position: relative;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    opacity: 1;">
+
+    </div>
+
+    </html>
+    <script>
+        $("#btn-move").on("click", function() {
+            $("#box").animate({
+                left: "300px",
+                opacity: 0.5
+            }, 800, function() {
+                console.log("Đã di chuyển xong!"); // callback sau khi xong
+            });
+        });
+
+        $("#btn-grow").on("click", function() {
+            $("#box")
+                .animate({
+                    width: "160px",
+                    height: "160px"
+                }, 300)
+                .delay(300)
+                .animate({
+                    width: "100px",
+                    height: "100px"
+                }, 300);
+        });
+
+        $("#btn-stop").on("click", function() {
+            $("#box").stop(true);
+        });
+    </script>
+    </div>
+</body>
+
+</html>
