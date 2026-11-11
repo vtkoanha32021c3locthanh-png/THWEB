@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .display {
+            display: flex;
+        }
+        
+        .disappear {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    //Cau 1:
+    <button id="btnRed">Red</button>
+    <button id="btnBlue">Blue</button>
+    <p id="paragraph">This is a paragraph</p>
+    //Cau 2:
+    <button id="btnInc">Increment</button>
+    <span id="count"></span>
+    <br> //Cau 3:
+    <button id="btnShow">Hien thi</button>
+    <button id="btnDis">An di</button>
+    <span id="display">Toi o day ne</span>
+
+    <script>
+        //Cau 1:    
+        var btnRed = document.getElementById('btnRed');
+        var btnBlue = document.getElementById('btnBlue');
+        var paragraph = document.getElementById('paragraph');
+        console.log(paragraph);
+
+        btnRed.onclick = () => {
+            paragraph.style.backgroundColor = 'red';
+        }
+
+        btnBlue.onclick = () => {
+            paragraph.style.backgroundColor = 'blue';
+        }
+
+        //Cau 2:
+        var btnInc = document.getElementById('btnInc');
+        var countEle = document.getElementById('count');
+        var count = 0;
+
+        function fn() {
+            count++;
+            countEle.innerText = count;
+        }
+
+        btnInc.onclick = fn;
+
+        //Cau 3:
+        var btnShow = document.getElementById('btnShow');
+        var btnDis = document.getElementById('btnDis');
+        var display = document.getElementById('display');
+
+        btnShow.onclick = () => {
+            console.log("show");
+            display.classList.remove("disappear")
+            display.classList.add("display")
+        }
+
+        btnDis.onclick = () => {
+            console.log("click");
+            display.classList.add("disappear")
+        }
+    </script>
+
+</body>
+
+</html>
